@@ -6,27 +6,27 @@ export const getAllCustomers = async ()=> {
     return await prisma.customers.findMany();
 }
 
-export const createPCustome = async (customerData)=> {
-    return await prisma.customer.create({
+export const createCustomer = async (customerData)=> {
+    return await prisma.customers.create({
         data: customerData,
     });
 }
 
 export  const getCustomerById = async (id)=> {
-    return await prisma.customer.findUnique({
+    return await prisma.customers.findUnique({
         where: {id: parseInt(id)},
     });
 }
 
 export const updateCustomer = async (id,customerData)=> {
-    return await prisma.customer.update({
+    return await prisma.customers.update({
         where: {id: parseInt(id)},
         data: customerData,
     });
 }
 
 export const deleteCustomer = async (id)=> {
-    return await prisma.customer.delete({
+    return await prisma.customers.delete({
         where: {id: parseInt(id)},
     });
 }

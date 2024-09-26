@@ -4,9 +4,9 @@ import {Router} from "express";
 const router = Router();
 
 router.get('/customers', getCustomers);
-router.post("/products", createCustomerController)
-router.get("/products/:id", getCustomer)
-router.patch("/products/:id", updateCustomerController)
-router.delete("/products/:id",deleteCustomerController)
+router.post("/customers", createCustomerController)
+router.get("/customers/:id", getCustomer)
+router.patch("/customers/:id", updateCustomerController)
+router.delete("/customers/:id",deleteCustomerController)
 
 export default router;
